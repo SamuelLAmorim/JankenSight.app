@@ -33,16 +33,16 @@ This project is a hands-on and visually appealing demonstration of **object dete
 
 git clone https://github.com/SeuUsuario/jokenpo-yolov8.git
 cd jokenpo-yolov8
+
 2. Create and Activate Virtual Environment
-bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
-# .\venv\Scripts\activate # Windows
+.\venv\Scripts\activate # Windows
+
 3. Install Dependencies
-bash
-Copy code
 pip install ultralytics opencv-python numpy
+
 4. Place the Model
 Ensure your trained model best.pt is inside the models/ directory:
 
