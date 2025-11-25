@@ -1,58 +1,76 @@
-# JankenSight
+# 🖐️ JankenSight  
+### Rock-Paper-Scissors with Computer Vision (YOLOv8)
 
-🌟 Rock-Paper-Scissors with Computer Vision (YOLOv8)🎯 
+---
 
-About the ProjectThis is an interactive project that combines computer vision with the classic game Rock, Paper, Scissors (Jokenpô). Using the YOLOv8 object detection model, the system detects your hand movement (your move) in real-time via webcam and plays against an Artificial Intelligence (AI) to determine the winner.
-The project serves as a practical and visually appealing demonstration of object detection using Python, leveraging the ultralytics and OpenCV libraries.
+## 🌟 About the Project  
+**JankenSight** is an interactive project that combines **computer vision** with the classic game **Rock, Paper, Scissors (Jokenpô)**.  
+Using a **YOLOv8** model trained to recognize hand gestures, the system detects your move in real time via webcam and plays against an AI opponent.
 
-⚡ Key Features
-- Real-Time Detection: Uses the YOLOv8 model specifically trained to classify Rock, Paper, and Scissors gestures.
-- Enhanced OpenCV Interface: A robust graphical interface featuring a prominently placed centralized scoreboard, countdown timer, and interactive buttons (Quit, Pause, Fullscreen).
-- Responsive Design: Visual elements (buttons and zones) are positioned to look good across different window sizes.
+This project is a hands-on and visually appealing demonstration of **object detection using Python**, leveraging the **Ultralytics** and **OpenCV** libraries.
 
-🛠️ Technologies Used
-- Python 3.x
-- YOLOv8 (Ultralytics): Deep learning framework for object detection.
-- OpenCV (cv2): Camera handling, GUI management, and real-time visualization.
+---
 
-⚙️ Installation and SetupFollow the steps below to set up and run the project on your machine.
-1. Clone the Repository
-   Open your terminal and clone the project:
-   git clone https://github.com/SeuUsuario/jokenpo-yolov8.git
-   cd jokenpo-yolov8
+## ⚡ Key Features  
+- 🎥 **Real-Time Detection** – YOLOv8 classifies Rock, Paper, and Scissors directly from your webcam.  
+- 🖼️ **Enhanced OpenCV Interface** – Central scoreboard, countdown timer, and interactive buttons (Quit, Pause, Fullscreen).  
+- 📐 **Responsive Layout** – UI elements adapt well to different window sizes.  
+- 🧩 **Clean Game Logic** – Organized structure separating interface, model handling, and game rules.
 
-3. Install DependenciesIt's recommended to use a virtual environment:
-    Create and activate virtual environment: 
----> python -m venv venv
-     source venv/bin/activate  # Linux/macOS
-     # .\venv\Scripts\activate # Windows
+---
 
+## 🛠️ Technologies Used  
+- **Python 3.x**  
+- **YOLOv8 (Ultralytics)** — Deep learning model for gesture detection  
+- **OpenCV (cv2)** — Webcam control, drawing UI, and visualization  
+- **NumPy**
 
-4. Install dependencies
+---
+
+## ⚙️ Installation and Setup  
+
+### 1. Clone the Repository  
+
+git clone https://github.com/SeuUsuario/jokenpo-yolov8.git
+cd jokenpo-yolov8
+2. Create and Activate Virtual Environment
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# .\venv\Scripts\activate # Windows
+3. Install Dependencies
+bash
+Copy code
 pip install ultralytics opencv-python numpy
+4. Place the Model
+Ensure your trained model best.pt is inside the models/ directory:
 
-5. Configure the ModelThe trained model (best.pt) must be placed in the models/ directory.
-
+Copy code
 jokenpo-yolov8/
 ├── game.py
 ├── utils/
 │   └── game_logic.py
 ├── models/
-│   └── best.pt  
+│   └── best.pt
 └── README.md
+▶️ How to Play
+Run the main game file:
 
-▶️ How to PlayRun the main file game.py:
-  > python game.py
+python game.py
+🎮 Interface and Controls
+🧭 Screen Elements
+Element	Description
+Centralized Scoreboard	Shows your score and the AI's score.
+Bottom Zones	Left: your detection area. Right: AI’s area.
+Countdown Timer	Time left before the next move.
 
-🎮 Interface and ControlsElementFunction
-Centralized Scoreboard ---- Displays YOUR and AI scores prominently at the bottom center.
-Bottom Zones           ---- Indicate your detection area (left) and the AI's area (right).
-Countdown Timer        ---- Shows the time remaining before the next move.
+⌨️ Buttons & Shortcuts
+Button / Key	Function
+F	Toggle fullscreen
+P	Pause / Resume
+Q	Quit game
 
-Button           Shortcut            KeyFunction
-TELA CHEIA          F           Toggles between windowed and fullscreen mode.
-PAUSE/RETOMAR       P           Pauses or resumes the game loop.
-SAIR                Q           Quits the application.
-
-
-🤝 ContributionsContributions, suggestions, and bug reports are welcome! Feel free to open an issue or submit a pull request.
+🤝 Contributions
+Contributions, suggestions, and bug reports are welcome!
+Feel free to open an issue or submit a pull request.
